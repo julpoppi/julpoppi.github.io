@@ -14,7 +14,7 @@ const main = async () => {
     if (status.state === 'granted') {
       try {
         // Register new sync every 24 hours
-        await registration.periodicSync.register('news', {
+        await registration.periodicSync.register('vote', {
           minInterval: 1000, // 1 day
         });
         console.log('Periodic background sync registered!');
