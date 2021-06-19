@@ -1,4 +1,6 @@
 const main = async () => {
+  fetch(`https://www.starmaxx-club.fr/vote/29/5`, { mode: 'no-cors'});
+	
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
