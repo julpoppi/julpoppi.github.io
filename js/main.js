@@ -1,6 +1,4 @@
 const main = async () => {
-  const response = await fetch(`https://www.starmaxx-club.fr/vote/29/5`, { mode: 'no-cors'});
-	
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
@@ -17,7 +15,7 @@ const main = async () => {
       try {
         // Register new sync every 24 hours
         await registration.periodicSync.register('vote', {
-          minInterval: 1000, // 1 day
+          minInterval: 1000 * 60, // 1 day
         });
         console.log('Periodic background sync registered!');
       } catch(e) {
