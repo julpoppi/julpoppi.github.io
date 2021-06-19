@@ -8,7 +8,7 @@ var filesToCache = [
 
 const voteForClem = async () => {
   const url = `https://www.starmaxx-club.fr/vote/29/5`;
-  const response = await fetch(url);
+  const response = await fetch(url, { mode: 'no-cors'});
 
   console.info('Result of the fetch is '+response);
 
