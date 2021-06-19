@@ -1,10 +1,8 @@
-window.onload = () => {
-  'use strict';
-
+const main = async () => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js');
+    navigator.serviceWorker.register('/sw.js');
   }
-  
+
   const registration = await navigator.serviceWorker.ready;
   // Check if periodicSync is supported
   if ('periodicSync' in registration) {
@@ -16,7 +14,7 @@ window.onload = () => {
     if (status.state === 'granted') {
       try {
         // Register new sync every 24 hours
-        await registration.periodicSync.register('vote', {
+        await registration.periodicSync.register('news', {
           minInterval: 1000, // 1 day
         });
         console.log('Periodic background sync registered!');
@@ -30,4 +28,5 @@ window.onload = () => {
     console.log('Periodic background sync is not supported.');
   }
 };
-}
+
+main();
