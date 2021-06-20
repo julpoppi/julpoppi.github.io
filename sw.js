@@ -18,11 +18,6 @@ const voteForClem = async () => {
             tag: timestamp, // a unique ID
             silent: true,
             body: body, // content of the push notification
-            data: {
-                url: window.location.href, // pass the current url to the notification
-            },
-            badge: './images/hello-icon-144.png',
-            icon: './images/hello-icon-144.png',
         });
 
     console.info('Result of the fetch is ' + response);
