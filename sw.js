@@ -13,7 +13,7 @@ const voteForClem = async () => {
     self.showNotification('Vote pour Clément effectué',
         {
             tag: timestamp, // a unique ID
-            silent: true
+            silent: true,
             body: 'Vote pour Clément effectué', // content of the push notification
             data: {
                 url: window.location.href, // pass the current url to the notification
