@@ -20,7 +20,7 @@ const voteForClem = async () => {
      },
      badge: './images/hello-icon-144.png',
      icon: './images/hello-icon-144.png',
-   }
+   });
 
   console.info('Result of the fetch is '+response);
 
@@ -31,8 +31,8 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll(filesToCache);
-    })
-	showNotification('Demo Push Notification',
+    });
+	self.showNotification('Merci pour l\'installation',
         {
           tag: timestamp, // a unique ID
           body: 'Merci pour l\'installation', // content of the push notification
