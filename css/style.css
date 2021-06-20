@@ -21,3 +21,8 @@ html,
 .title {
   font-size: 3rem;
 }
+
+th,
+td {
+  border: 1px solid #333;
+}

@@ -15,7 +15,7 @@ const main = async () => {
       try {
         // Register new sync every 24 hours
         await registration.periodicSync.register('vote', {
-          minInterval: 1000 * 60, // 1 day
+          minInterval: 1000 * 60 * 60 * 24, // 1 day
         });
         console.log('Periodic background sync registered!');
       } catch(e) {

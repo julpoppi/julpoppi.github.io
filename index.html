@@ -1,24 +1,89 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Vote clem</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="white"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="mobile-mobile-web-app-title" content="Vote clem">
-  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta charset="utf-8">
+    <title>Vote clem</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-mobile-web-app-title" content="Vote clem">
+    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
 </head>
 <body class="fullscreen">
-  <div class="container">
-    <h1 class="title">Vote automatique pour Clément F. V2</h1>
-  </div>
-  <script src="js/main.js"></script>
+<div class="container">
+    <h1 class="title">Vote automatique pour Clément F</h1>
+    <p>Version v3</p>
+    <p>Ce site permet de générer des votes pour Clément régulièrement et automatiquement sur <a href="https://www.starmaxx-club.fr/details/29">Starmaxx</a>. Les
+        votes sont générés comme si vous aviez visité le site.</p>
+    <p>Vous pouvez installer ce site sur votre mobile et/ou sur vos PC (cela permet de générer autant de vote que vous avez d'appareil).</p>
+    <p>Vous recevrez une notification silencieux à chaque vote. <span style="color:red;">Si vous ne recevez plus de notifications au bout de 48h, rouvrez l'application pour relancer les votes.</span>
+    </p>
+    <p>Suivre la <a href="#process">Procédure</a> pour la mise en route. | Voir la <a href="#faq">FAQ</a></p>
+    <h2 id="process" class="title">Procédure d'installation</h2>
+    <ol>
+        <li>De préférence utiliser chrome (car tester avec), mais cela doit aussi fonctionner sur les autres navigateurs récents.</li>
+        <li>Accepter les notifications quand chrome vous le demande.</li>
+        <table>
+            <thead>
+            <tr>
+                <th>Sur PC</th>
+                <th>Sur mobile</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="images/notif-desktop.png"/></td>
+                <td><img src="images/notif-mobile.png"/></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <li>Installer l'application (trois points sur le coté de chrome -> installer).</li>
+        <table>
+            <thead>
+            <tr>
+                <th>Sur PC</th>
+                <th>Sur mobile</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="images/install-desktop.png"/></td>
+                <td><img src="images/install-mobile.png"/></td>
+            </tr>
+            </tbody>
+        </table>
+        <li>Vous recevrez une notification à chaque fois qu'un vote est effectué. Si vous remarquer que vous n'avez plus de notifications, pensez à rouvrir
+            l'application pour la relancer..
+        </li>
+    </ol>
+    <h2 id="faq" class="title">FAQ</h2>
+    <table>
+        <tbody>
+        <tr>
+            <td style="font-weight: bold;">Pourquoi je reçois des notifications ?</td>
+            <td>Pour vous permettre de vous assurer que les votes automatiques fonctionnent toujours.<br/>
+                Voir "Pourquoi je dois ouvrir l'application de temps en temps ?"</td>
+        <tr></tr>
+            <td style="font-weight: bold;">Pourquoi je ne reçois plus les notifications ?</td>
+            <td>Voir "Pourquoi je dois ouvrir l'application de temps en temps ?"</td>
+        <tr></tr>
+            <td style="font-weight: bold;">Pourquoi je dois ouvrir l'application de temps en temps ?</td>
+            <td>Le système utilisé fait que chrome effectue des requêtes en arrière plan pour voter (environ 1 fois par jour ou moins). Cependant, le rythme des votes est géré
+                par chrome et dépend de l'usage de l'application.<br/>Au bout d'un certain temps, chrome considère que vous n'utiliser plus l'applicaton et arrête de
+                voter en arrière plan. Il faut alors relancer l'application pour redémarrer les votes automatiques.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
