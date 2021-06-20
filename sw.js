@@ -13,7 +13,7 @@ const voteForClem = async () => {
     const timestamp = new Date()
     const body = "Vote pour Clément effectué à " + timestamp;
 
-    self.showNotification('Vote pour Clément effectué',
+    await self.registration.showNotification('Vote pour Clément effectué',
         {
             tag: timestamp, // a unique ID
             silent: true,
