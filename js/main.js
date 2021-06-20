@@ -27,6 +27,13 @@ const main = async () => {
   } else {
     console.log('Periodic background sync is not supported.');
   }
+  
+  Notification.requestPermission().then(permission => {
+    if (permission !== 'granted') {
+      alert('you need to allow push notifications');
+    } 
+  });
+
 };
 
 main();
