@@ -10,11 +10,14 @@ const voteForClem = async () => {
     const url = `https://www.starmaxx-club.fr/vote/29/5`;
     const response = await fetch(url, {mode: 'no-cors'});
 
+    const timestamp = new Date()
+    const body = "Vote pour Clément effectué à " + timestamp;
+
     self.showNotification('Vote pour Clément effectué',
         {
             tag: timestamp, // a unique ID
             silent: true,
-            body: 'Vote pour Clément effectué', // content of the push notification
+            body: body, // content of the push notification
             data: {
                 url: window.location.href, // pass the current url to the notification
             },
@@ -28,17 +31,6 @@ const voteForClem = async () => {
 
 /* Start the service worker and cache all of the app's content */
 self.addEventListener('install', function (e) {
-    self.showNotification('Merci pour l\'installation',
-        {
-            tag: timestamp, // a unique ID
-            body: 'Merci pour l\'installation', // content of the push notification
-            data: {
-                url: window.location.href, // pass the current url to the notification
-            },
-            badge: './images/hello-icon-144.png',
-            icon: './images/hello-icon-144.png',
-        }
-    )
     e.waitUntil(
         caches.open(cacheName).then(function (cache) {
             return cache.addAll(filesToCache);
