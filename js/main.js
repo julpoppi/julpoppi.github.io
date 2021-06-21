@@ -51,6 +51,4 @@ const main = async () => {
 
 };
 
-};
-
 main();
