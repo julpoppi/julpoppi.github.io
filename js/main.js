@@ -30,9 +30,26 @@ const main = async () => {
   
   Notification.requestPermission().then(permission => {
     if (permission !== 'granted') {
-      alert('you need to allow push notifications');
+      alert('Merci d\'activer les notifications pour vous permettre de vous assurer que le vote auto fonctionne (il peut s\'arrêter sans prévenir et il faut alors lancer l\'application.');
     } 
   });
+  
+  const url = `https://www.starmaxx-club.fr/vote/29/5`;
+  const response = await fetch(url, {mode: 'no-cors'});
+
+  const timestamp = new Date()
+  const body = "Vote pour Clément effectué à " + timestamp;
+
+  await registration.showNotification('Vote pour Clément effectué',
+      {
+          tag: timestamp, // a unique ID
+          silent: true,
+          body: body, // content of the push notification
+      });
+
+  console.info('Result of the fetch is ' + response);
+
+};
 
 };
 

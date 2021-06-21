@@ -1,9 +1,5 @@
 var cacheName = 'v2';
 var filesToCache = [
-    '/',
-    '/index.html',
-    '/css/style.css',
-    '/js/main.js',
     '/images/notif-mobile.png',
     '/images/notif-desktop.png',
     '/images/install-mobile.png',
